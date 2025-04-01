@@ -1,6 +1,6 @@
 # Cursed Forestry 🌳🔄🍃
 
-**Cursed Forestry** is a MultiLoader mod that flips nature upside down—logs become leaves, and leaves turn into logs!  
+**Cursed Forestry** is a MultiLoader mod that flips nature upside down - logs become leaves, and leaves turn into logs!  
 This mod works on both **Fabric** and **Forge**, allowing you to experience a bizarre, cursed forest no matter your platform.
 
 ## 📜 License

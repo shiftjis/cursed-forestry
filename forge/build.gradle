@@ -1,6 +1,6 @@
 plugins {
-    id 'multiloader-loader'
-    id 'net.neoforged.moddev.legacyforge'
+    id "multiloader-loader"
+    id "net.neoforged.moddev.legacyforge"
 }
 
 mixin {
@@ -15,7 +15,7 @@ legacyForge {
 
     validateAccessTransformers = true
 
-    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    def at = project(":common").file("src/main/resources/META-INF/accesstransformer.cfg")
     if (at.exists()) {
         accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
     }
@@ -29,7 +29,7 @@ legacyForge {
         }
         data {
             data()
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            programArguments.addAll "--mod", project.mod_id, "--all", "--output", file("src/generated/resources/").getAbsolutePath(), "--existing", file("src/main/resources/").getAbsolutePath()
         }
         server {
             server()
@@ -43,15 +43,15 @@ legacyForge {
     }
 }
 
-sourceSets.main.resources.srcDir 'src/generated/resources'
+sourceSets.main.resources.srcDir "src/generated/resources"
 
 dependencies {
-    compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
+    compileOnly project(":common")
 }
 
 jar {
-    finalizedBy('reobfJar')
+    finalizedBy("reobfJar")
     manifest.attributes([
             "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
     ])

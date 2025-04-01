@@ -1,15 +1,11 @@
 {
     "required": true,
     "minVersion": "0.8",
-    "package": "com.example.examplemod.mixin",
+    "package": "com.github.shiftjis.cursedforestry.mixin",
     "refmap": "${mod_id}.refmap.json",
     "compatibilityLevel": "JAVA_17",
     "mixins": [
-    ],
-    "client": [
-        "MixinTitleScreen"
-    ],
-    "server": [
+        "MixinRegistryDataLoader"
     ],
     "injectors": {
         "defaultRequire": 1
